@@ -3,20 +3,17 @@ package com.cranestylelabs.tabtest4.activities;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
+import com.cranestylelabs.tabtest4.R;
 import com.cranestylelabs.tabtest4.fragments.FragmentTab1;
 import com.cranestylelabs.tabtest4.fragments.FragmentTab2;
 import com.cranestylelabs.tabtest4.fragments.FragmentTab3;
 import com.cranestylelabs.tabtest4.fragments.FragmentTab4;
-import com.cranestylelabs.tabtest4.R;
 
 
 public class MainActivity extends SherlockActivity implements ActionBar.TabListener {
-
-    private TextView mSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +21,6 @@ public class MainActivity extends SherlockActivity implements ActionBar.TabListe
         setContentView(R.layout.activity_main);
 
         int tabCount = 4;
-
-//        mSelected = (TextView)findViewById(R.id.text);
 
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
@@ -40,10 +35,8 @@ public class MainActivity extends SherlockActivity implements ActionBar.TabListe
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-//        mSelected.setText("Selected: " + tab.getText());
 
-        // When the given tab is selected, show the tab contents in the
-        // container view.
+        // When the given tab is selected, show the tab contents in the container view.
         Fragment fragment = null;
         switch(tab.getPosition()) {
             case 0:
